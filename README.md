@@ -1,5 +1,5 @@
 # **Rotate use case**
-### Rotate and align 1,546 mitochondrial and 465 chloroplast assemblies
+### Rotate and align 1,546 mitochondrial and 465 chloroplast assemblies from RefSeq.
 <br />
 
 **********
