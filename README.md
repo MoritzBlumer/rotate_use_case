@@ -11,7 +11,7 @@ cd rotate
 make
 cd ..
 
-# make executable and add to $PATH
+# make rotate executable and add it to $PATH
 chmod +x rotate/rotate
 export PATH=$PATH:${PWD}/rotate/
 ```
