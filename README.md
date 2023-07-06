@@ -39,11 +39,19 @@ Then click ```Create File``` and rename it:
 ```
 mv ${DOWNLOAD_LOCATION}/sequence.fasta input/mammalia.fa
 ```
+
 <br />
 
 ### Download 465 chloroplast assemblies:
 
 Likewise, download all chloroplast genomes available, using the search string ```(chloroplast[filter] AND complete[All Fields] AND genome[All Fields]) AND "Rosaceae"[Primary Organism] AND refseq[filter])``` and save them as ```input/rosaceae.fa```.
+
+<br />
+
+### Alternatively, both input FASTA files are also provided in ```input/```, to uncompress them and reproduce identical results as the paper, run:
+```
+gunzip input/mammalia.fa input/rosaceae.fa
+```
 
 <br />
 
@@ -82,6 +90,8 @@ mafft output/rosaceae.rotated.fa > output/rosaceae.aligned.fa
 rotate -x 163249 output/rosaceae.aligned.fa > output/rosaceae.final.fa
 ```
 <sup> \* anchor sequence (CGAAATCGGTAGACGCTACG) is a common barcode primer (see https://doi.org/10.1093/nar/gkl938)</sup>
+
+
 
 
 
