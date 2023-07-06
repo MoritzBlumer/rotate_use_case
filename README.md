@@ -50,7 +50,7 @@ Likewise, download all chloroplast genomes available, using the search string ``
 
 ### Alternatively, both input FASTA files are also provided in ```input/```, to uncompress them and reproduce identical results as the paper, run:
 ```
-gunzip input/mammalia.fa input/rosaceae.fa
+gunzip input/mammalia.fa.gz input/rosaceae.fa.gz
 ```
 
 <br />
