@@ -3,7 +3,7 @@
 <br />
 
 **********
-## **1&nbsp;&nbsp;|&nbsp;&nbsp;Install rotate**
+## **1&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Install rotate**
 ```
 # download and compile rotate
 git clone https://github.com/richarddurbin/rotate.git
@@ -20,7 +20,7 @@ export PATH=$PATH:${PWD}/rotate/
 
 **********
 
-## **2&nbsp;&nbsp;|&nbsp;&nbsp;Fetch sample datasets from NCBI**
+## **2&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Fetch sample datasets**
 
 Visit https://www.ncbi.nlm.nih.gov/nuccore
 
@@ -57,7 +57,7 @@ gunzip input/mammalia.fa input/rosaceae.fa
 
 **********
 
-## **3&nbsp;&nbsp;|&nbsp;&nbsp;Rotate & align**
+## **3&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;Rotate & align**
 
 
 ### Install MAFFT 7 for alignment step:
@@ -66,7 +66,7 @@ gunzip input/mammalia.fa input/rosaceae.fa
 ### Rotate all mitochondria sequences to a shared anchor string, then align with mafft and rotate to a common mitochondrial starting position:
 
 ```
-# rotate to custom anchor string*, allowinging for 1 mismatch
+# rotate to custom anchor string*, allowinging for 4 mismatches
 rotate -s TACGACCTCGATGTTGGATCA -m 4 input/mammalia.fa > output/mammalia.rotated.fa
 
 # align with mafft
@@ -90,9 +90,3 @@ mafft output/rosaceae.rotated.fa > output/rosaceae.aligned.fa
 rotate -x 163249 output/rosaceae.aligned.fa > output/rosaceae.final.fa
 ```
 <sup> \* anchor sequence (CGAAATCGGTAGACGCTACG) is a common barcode primer (see https://doi.org/10.1093/nar/gkl938)</sup>
-
-
-
-
-
-
